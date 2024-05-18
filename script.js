@@ -2,16 +2,16 @@
 let playerScore = 0
 let computerScore = 0
 
-let getComputerChoice = () =>{
-    const choice = ['rock', 'paper', 'scissors'];
-    const random = Math.floor(Math.random() * choice.length);
-    return choice[random];
-}
+// let getComputerChoice = () =>{
+//     const choice = ['rock', 'paper', 'scissors'];
+//     const random = Math.floor(Math.random() * choice.length);
+//     return choice[random];
+// }
 
-let getPlayerChoice = ()=>{
-    const choice = prompt("What do you wanna use?");
-    return choice.toLowerCase();
-}
+// let getPlayerChoice = ()=>{
+//     const choice = prompt("What do you wanna use?");
+//     return choice.toLowerCase();
+// }
 
 let playRound = (player, computer) => {
     let result;
