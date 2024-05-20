@@ -60,9 +60,14 @@ main{
 }
 
 .choice{
-    font-size: 50pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
     font-weight: 600;
-    padding: 20px 40px;
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
     background-color: #eef1f5;
     margin:10px 25px;
     border-radius: 10px;
@@ -91,7 +96,7 @@ main{
 }
 
 .button{
-    padding: 40px;
+    padding: 5px;
     /* border: black solid 1px; */
     margin: 10px;
     background-color: #f0f0f0;
@@ -105,11 +110,61 @@ main{
 }
 
 .button-emoji{
-    font-size: 3rem;
+    font-size: 5em;
     cursor: pointer;
 }
 
 footer{
     text-align: center;
     margin: 10px;
+}
+
+/* Modal */
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: #eef1f5;
+    font-weight: 700;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.play-again.active {
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute; /* Position it absolutely */
+    bottom: 20px; /* Adjust bottom position */
+    left: 50%; /* Center horizontally */
+    /* Optionally, adjust other positioning properties as needed */
+}
+
+.overlay.active{
+    display: block;
 }
